@@ -103,6 +103,10 @@ function MyApp({ Component, pageProps }) {
     setcartItems(newList);
   };
 
+  const resetCart = () => {
+    setcartItems([]);
+  };
+
   const flash = useContext(flashContext);
 
   return (
@@ -115,6 +119,7 @@ function MyApp({ Component, pageProps }) {
           deleteItem: deleteItem,
           addQuantity: addQuantity,
           removeQuantity: removeQuantity,
+          resetCart: resetCart,
         }}
       >
         <FlashContextProvider>
