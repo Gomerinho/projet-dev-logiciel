@@ -2,16 +2,19 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../pages/_app';
 
 const Header = () => {
   const cart = useContext(CartContext);
-  const token = false;
+  const [token, setToken] = useState(null);
 
-  if (typeof window !== 'undefined') {
-    token = localStorage.getItem('token');
-  }
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setToken(localStorage.getItem('token'));
+    }
+  }, []);
+
   return (
     <header className='header'>
       <div className='header__navigation'>

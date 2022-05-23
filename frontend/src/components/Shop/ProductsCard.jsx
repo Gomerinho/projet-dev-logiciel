@@ -12,9 +12,9 @@ const ProductsCard = ({ product, id }) => {
           />
         </div>
         <div className='card__content'>
-          <h6>{product.collection.data?.attributes?.name || ''}</h6>
           <h4>{product.title}</h4>
-          <p className='card__price'>{`${product.price} €`} </p>
+          <h6>{product.collection.data?.attributes?.name || ''}</h6>
+          <p className='card__price'>{`à partir de ${product.price} €`} </p>
         </div>
       </div>
     </Link>

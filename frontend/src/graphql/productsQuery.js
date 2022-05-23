@@ -36,20 +36,35 @@ export const GET_PRODUCTS = gql`
   }
 `;
 
-export const GET_USER_WISH = gql`
-  query GET_USER_WISH($id: ID) {
-    usersPermissionsUser(id: $id) {
+export const GET_LATEST_PRODUCTS = gql`
+  query Products($pagination: PaginationArg) {
+    products(pagination: $pagination, sort: ["createdAt:DESC"]) {
       data {
-        id
         attributes {
-          products {
+          title
+          price
+          image {
             data {
               attributes {
-                title
+                url
               }
             }
           }
+          stock
+          availability
+          collection {
+            data {
+              attributes {
+                name
+              }
+            }
+          }
+          description
+          createdAt
+          updatedAt
+          publishedAt
         }
+        id
       }
     }
   }
