@@ -1,0 +1,11 @@
+.profile {
+  margin: 2rem 3rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  padding: 2rem;
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+}

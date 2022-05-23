@@ -1,0 +1,39 @@
+.product {
+  display: flex;
+  gap: 5rem;
+  margin: 1rem 4rem;
+  justify-content: space-around;
+  &__image {
+    width: 20rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__collection {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.596);
+  }
+  &__details {
+    width: 30rem;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    padding-bottom: 1rem;
+  }
+  &__desc {
+    letter-spacing: 0.75px;
+    line-height: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  &__price {
+    font-weight: 300;
+    padding-bottom: 1.5rem;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+  }
+}

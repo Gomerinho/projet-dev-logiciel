@@ -1,0 +1,11 @@
+.toast {
+  padding: 1.25rem 0.75rem;
+  border-radius: 4px;
+  position: absolute;
+  top: -2rem;
+  right: 4%;
+  &.error {
+    background-color: rgba(203, 53, 53, 0.632);
+    color: rgb(148, 15, 15);
+  }
+}

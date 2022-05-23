@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+  &__navigation {
+    padding: 1rem 0;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  &__logo {
+    width: 10rem;
+  }
+  &__nav {
+    ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 25.6px;
+      cursor: pointer;
+      li {
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+
+      .dropdown__content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+        li {
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          color: black;
+        }
+      }
+
+      .link {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        svg {
+          stroke-width: 1px;
+        }
+        &:hover svg {
+          stroke-width: 2px;
+        }
+      }
+
+      &:hover svg {
+        stroke-width: 2px;
+      }
+      &:hover .dropdown__content {
+        display: block;
+        font-weight: 400;
+      }
+    }
+  }
+  &__auth {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      li {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 25.6px;
+        cursor: pointer;
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &__icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    .icon {
+      position: relative;
+      cursor: pointer;
+      svg {
+        stroke-width: 1px;
+        &:hover {
+          stroke-width: 2px;
+        }
+      }
+      &__label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(75%, -75%);
+        width: 1.35rem;
+        height: 1.35rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 10px;
+        border-radius: 50%;
+        background-color: rgb(12, 12, 12);
+      }
+    }
+  }
+}
